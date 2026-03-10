@@ -1,18 +1,17 @@
- 10PaMates
+# 10PaMates
 
 Proyecto web educativo para ayudar a estudiar matemáticas.
 
- Autores
+## Autores
 - Manuel Gerpe Landeira
 - Noah
 
- Descripción
+## Descripción
 10PaMates es una página web creada para facilitar el estudio de diferentes temas de matemáticas mediante explicaciones y ejercicios.
 
- Temas incluidos
+## Temas incluidos
 - Límites
 - Derivadas
 - Integrales
 - Áreas con integrales
 - Matrices
-
