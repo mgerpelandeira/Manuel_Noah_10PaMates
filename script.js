@@ -1,8 +1,11 @@
-console.log("10PaMates iniciado correctamente");
 function comprobarRespuesta(correcto) {
+    let resultado = document.getElementById("resultado");
+
     if (correcto) {
-        alert("Correcto ✅");
+        resultado.innerHTML = "✅ Correcto";
+        resultado.style.color = "green";
     } else {
-        alert("Incorrecto ❌");
+        resultado.innerHTML = "❌ Incorrecto";
+        resultado.style.color = "red";
     }
 }
