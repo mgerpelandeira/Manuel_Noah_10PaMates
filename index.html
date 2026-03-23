@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>10PaMates</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>10PaMates</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,14 +12,24 @@
     <h1>10PaMates</h1>
 
     <nav>
-        <button> Límites </button>
-        <button> Derivadas </button>
-        <button> Integrales </button>
-        <button> Áreas con integrales </button>
-        <button> Matrices </button>
+        <a href="limites.html"><button>Límites</button></a>
+        <a href="derivadas.html"><button>Derivadas</button></a>
+        <a href="integrales.html"><button>Integrales</button></a>
+        <a href="areas.html"><button>Áreas</button></a>
+        <a href="matrices.html"><button>Matrices</button></a>
     </nav>
 </header>
 
+<h2>Ejemplo interactivo</h2>
+
+<p>¿Cuánto es 2 + 3?</p>
+
+<button onclick="comprobarRespuesta(true)">5</button>
+<button onclick="comprobarRespuesta(false)">6</button>
+
+<p id="resultado"></p>
+
 <script src="script.js"></script>
+
 </body>
 </html>
