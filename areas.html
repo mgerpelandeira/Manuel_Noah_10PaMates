@@ -2,13 +2,33 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Áreas con integrales</title>
+<title>Áreas</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 
 <body>
 
+<div class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="limites.html">Límites</a>
+    <a href="derivadas.html">Derivadas</a>
+    <a href="integrales.html">Integrales</a>
+    <a href="areas.html">Áreas</a>
+    <a href="matrices.html">Matrices</a>
+</div>
+
 <h1>Áreas con integrales</h1>
+
+<p>Las integrales permiten calcular áreas bajo curvas.</p>
+
+<p>Ejemplo: ∫₀² x dx = 2</p>
+
+<p>¿Área aproximada?</p>
+<button onclick="comprobarRespuesta(true)">2</button>
+<button onclick="comprobarRespuesta(false)">4</button>
+
+<p id="resultado"></p>
 
 </body>
 </html>
