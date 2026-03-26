@@ -2,17 +2,45 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff3e6;
     text-align: center;
 }
 
-/* PORTADA (ya la tienes) */
+/* PORTADA */
 .portada-body {
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.portada-container {
+    color: white;
+}
+
+.titulo {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-principal {
+    padding: 15px 30px;
+    background-color: white;
+    color: #ff7e5f;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn-principal:hover {
+    background-color: #eee;
 }
 
 /* MENÚ */
@@ -32,18 +60,21 @@ body {
     text-decoration: underline;
 }
 
-/* TÍTULOS */
+/* CONTENIDO */
 h1 {
     color: #ff7e5f;
     margin-top: 30px;
 }
 
-/* TEXTO */
+h2 {
+    color: #333;
+}
+
 p {
     font-size: 18px;
 }
 
-/* BOTONES */
+/* BOTONES EJERCICIOS */
 button {
     padding: 10px 15px;
     margin: 10px;
@@ -62,4 +93,60 @@ button:hover {
 #resultado {
     font-weight: bold;
     margin-top: 15px;
+}
+
+/* CHATBOT */
+
+/* BOTÓN CHAT */
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* CAJA CHAT */
+.chatbox {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 260px;
+    background: white;
+    border: 2px solid #ff7e5f;
+    border-radius: 10px;
+}
+
+/* CABECERA CHAT */
+.chat-header {
+    background: #ff7e5f;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.cerrar {
+    float: right;
+    cursor: pointer;
+}
+
+/* MENSAJES */
+.chat-mensajes {
+    height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+/* INPUT */
+#chat-input {
+    width: 70%;
+    padding: 5px;
+    margin: 5px;
 }
