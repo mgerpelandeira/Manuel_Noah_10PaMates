@@ -15,5 +15,25 @@
     <a href="limites.html" class="btn-principal">Empezar</a>
 </div>
 
+<!-- BOTÓN CHAT -->
+<button class="chat-btn" onclick="abrirChat()">💬</button>
+
+<!-- CHAT -->
+<div id="chatbox" class="chatbox">
+
+    <div class="chat-header">
+        Chat 10PaMates
+        <span onclick="cerrarChat()" class="cerrar">X</span>
+    </div>
+
+    <div id="chat-mensajes" class="chat-mensajes"></div>
+
+    <input type="text" id="chat-input" placeholder="Pregunta algo de mates...">
+    <button onclick="enviarMensaje()">Enviar</button>
+
+</div>
+
+<script src="chat.js"></script>
+
 </body>
 </html>
