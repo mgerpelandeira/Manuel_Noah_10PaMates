@@ -1,9 +1,12 @@
+/* GENERAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #fff3e6;
+    text-align: center;
 }
 
-/* PORTADA */
+/* PORTADA (ya la tienes) */
 .portada-body {
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     height: 100vh;
@@ -12,40 +15,10 @@ body {
     align-items: center;
 }
 
-.portada-container {
-    text-align: center;
-    color: white;
-}
-
-.titulo {
-    font-size: 60px;
-    margin-bottom: 10px;
-}
-
-.subtitulo {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.btn-principal {
-    padding: 15px 30px;
-    background-color: white;
-    color: #ff7e5f;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.btn-principal:hover {
-    background-color: #eee;
-}
-
-/* MENÚ DE PÁGINAS */
+/* MENÚ */
 .menu {
-    background-color: #222;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
     padding: 15px;
-    text-align: center;
 }
 
 .menu a {
@@ -56,5 +29,37 @@ body {
 }
 
 .menu a:hover {
+    text-decoration: underline;
+}
+
+/* TÍTULOS */
+h1 {
     color: #ff7e5f;
+    margin-top: 30px;
+}
+
+/* TEXTO */
+p {
+    font-size: 18px;
+}
+
+/* BOTONES */
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff7e5f;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5674f;
+}
+
+/* RESULTADO */
+#resultado {
+    font-weight: bold;
+    margin-top: 15px;
 }
