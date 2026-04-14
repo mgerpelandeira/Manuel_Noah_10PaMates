@@ -181,3 +181,12 @@ button {
     border: none;
     padding: 10px;
 }
+/* IMÁGENES */
+.tema-img {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
