@@ -1,9 +1,11 @@
+/* RESET */
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
-/* PORTADA */
+/* ================= PORTADA ================= */
+
 .portada-body {
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     height: 100vh;
@@ -23,6 +25,7 @@ body {
 
 .subtitulo {
     font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .btn-principal {
@@ -31,9 +34,66 @@ body {
     color: #ff7e5f;
     border-radius: 10px;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* CHAT BOTÓN */
+/* ================= TEMAS ================= */
+
+body:not(.portada-body) {
+    background: linear-gradient(135deg, #fff5f2, #ffe3d8);
+}
+
+/* CONTENEDOR */
+.contenido {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* MENÚ */
+.menu {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TEXTO */
+h1 {
+    color: #ff7e5f;
+}
+
+h2 {
+    color: #ff7e5f;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* BOTONES */
+button {
+    margin: 10px;
+    padding: 10px 15px;
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ================= CHAT ================= */
+
+/* BOTÓN */
 .chat-btn {
     position: fixed;
     bottom: 20px;
@@ -47,7 +107,7 @@ body {
     cursor: pointer;
 }
 
-/* CHATBOX */
+/* CAJA */
 .chatbox {
     display: none;
     position: fixed;
