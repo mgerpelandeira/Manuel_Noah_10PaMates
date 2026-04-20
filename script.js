@@ -1,23 +1,21 @@
-// ================= EXAMEN =================
-
 let puntuacion = 0;
-let preguntasRespondidas = 0;
+let respondidas = 0;
 
-function responder(correcta, boton) {
+function responder(correcta, btn) {
 
-    let botones = boton.parentElement.querySelectorAll("button");
+    let botones = btn.parentElement.querySelectorAll("button");
     botones.forEach(b => b.disabled = true);
 
-    preguntasRespondidas++;
+    respondidas++;
 
     if (correcta) {
         puntuacion++;
-        boton.style.background = "green";
+        btn.style.background = "green";
     } else {
-        boton.style.background = "red";
+        btn.style.background = "red";
     }
 
-    if (preguntasRespondidas === 10) {
+    if (respondidas === 10) {
         mostrarNota();
     }
 }
@@ -32,58 +30,44 @@ function mostrarNota() {
 }
 
 
-// ================= CHATBOT =================
+// ================= CHAT =================
 
-// Espera a que cargue la página
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    window.abrirChat = function () {
-        document.getElementById("chatbox").style.display = "block";
-    };
+window.abrirChat = function () {
+    document.getElementById("chatbox").style.display = "block";
+};
 
-    window.cerrarChat = function () {
-        document.getElementById("chatbox").style.display = "none";
-    };
+window.cerrarChat = function () {
+    document.getElementById("chatbox").style.display = "none";
+};
 
-    window.enviarMensaje = function () {
+window.enviarMensaje = function () {
 
-        let input = document.getElementById("chat-input");
-        let mensaje = input.value.trim().toLowerCase();
+    let input = document.getElementById("chat-input");
+    let texto = input.value.toLowerCase().trim();
 
-        if (mensaje === "") return;
+    if (texto === "") return;
 
-        let chat = document.getElementById("chat-mensajes");
+    let chat = document.getElementById("chat-mensajes");
 
-        // MENSAJE USUARIO
-        let user = document.createElement("div");
-        user.className = "usuario";
-        user.textContent = mensaje;
-        chat.appendChild(user);
+    let user = document.createElement("div");
+    user.className = "usuario";
+    user.textContent = texto;
+    chat.appendChild(user);
 
-        // RESPUESTA BOT
-        let bot = document.createElement("div");
-        bot.className = "bot";
+    let bot = document.createElement("div");
+    bot.className = "bot";
 
-        if (mensaje.includes("limite")) {
-            bot.textContent = "Un límite indica a qué valor se acerca una función.";
-        }
-        else if (mensaje.includes("derivada")) {
-            bot.textContent = "La derivada mide cómo cambia una función.";
-        }
-        else if (mensaje.includes("integral")) {
-            bot.textContent = "La integral calcula áreas bajo la curva.";
-        }
-        else if (mensaje.includes("hola")) {
-            bot.textContent = "Hola 👋 soy tu asistente de matemáticas.";
-        }
-        else {
-            bot.textContent = "Prueba con: límite, derivada o integral.";
-        }
+    if (texto.includes("limite")) bot.textContent = "Un límite estudia a qué valor se acerca una función.";
+    else if (texto.includes("derivada")) bot.textContent = "La derivada mide el cambio de una función.";
+    else if (texto.includes("integral")) bot.textContent = "La integral calcula áreas bajo curvas.";
+    else bot.textContent = "Pregunta sobre: límite, derivada o integral.";
 
-        chat.appendChild(bot);
+    chat.appendChild(bot);
 
-        input.value = "";
-        chat.scrollTop = chat.scrollHeight;
-    };
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
+};
 
 });
