@@ -1,90 +1,153 @@
-// ================= EXAMEN =================
-
-let puntuacion = 0;
-let preguntasRespondidas = 0;
-
-function responder(correcta, boton) {
-
-    let botones = boton.parentElement.querySelectorAll("button");
-    botones.forEach(b => b.disabled = true);
-
-    preguntasRespondidas++;
-
-    if (correcta) {
-        puntuacion++;
-        boton.style.background = "green";
-    } else {
-        boton.style.background = "red";
-    }
-
-    if (preguntasRespondidas === 10) {
-        mostrarNota();
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
 }
 
-function mostrarNota() {
-    let nota = (puntuacion / 10) * 10;
+/* ================= PORTADA ================= */
 
-    let mensaje = "";
-
-    if (nota >= 9) mensaje = "🔥 Sobresaliente";
-    else if (nota >= 7) mensaje = "👏 Notable";
-    else if (nota >= 5) mensaje = "👍 Aprobado";
-    else mensaje = "❌ Suspenso";
-
-    document.getElementById("resultado").innerHTML =
-        "<h2>Resultado final</h2>" +
-        "Aciertos: " + puntuacion + "/10<br>" +
-        "Nota: " + nota + " - " + mensaje;
+.portada {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-// ================= CHATBOT =================
-
-function abrirChat() {
-    document.getElementById("chatbox").style.display = "block";
+.portada-container {
+    text-align: center;
+    color: white;
 }
 
-function cerrarChat() {
-    document.getElementById("chatbox").style.display = "none";
+.titulo {
+    font-size: 60px;
 }
 
-function enviarMensaje() {
-    let input = document.getElementById("chat-input");
-    let mensaje = input.value.toLowerCase();
+.subtitulo {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
 
-    if (mensaje.trim() === "") return;
+.btn-principal {
+    padding: 12px 25px;
+    background: white;
+    color: #ff7e5f;
+    border-radius: 10px;
+    text-decoration: none;
+}
 
-    let chat = document.getElementById("chat-mensajes");
+/* ================= CONTENIDO ================= */
 
-    // Mensaje usuario
-    let userMsg = document.createElement("div");
-    userMsg.className = "usuario";
-    userMsg.innerText = mensaje;
-    chat.appendChild(userMsg);
+.contenido {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+}
 
-    // Respuesta IA
-    let botMsg = document.createElement("div");
-    botMsg.className = "bot";
+/* ================= MENÚ ================= */
 
-    if (mensaje.includes("limite")) {
-        botMsg.innerText = "Un límite es el valor al que se aproxima una función.";
-    }
-    else if (mensaje.includes("derivada")) {
-        botMsg.innerText = "La derivada mide el cambio de una función.";
-    }
-    else if (mensaje.includes("integral")) {
-        botMsg.innerText = "La integral sirve para calcular áreas y acumulaciones.";
-    }
-    else if (mensaje.includes("hola")) {
-        botMsg.innerText = "Hola 👋 soy tu asistente de matemáticas.";
-    }
-    else {
-        botMsg.innerText = "No entiendo la pregunta, prueba con: límite, derivada o integral.";
-    }
+.menu {
+    background: #ff7e5f;
+    padding: 10px;
+    text-align: center;
+}
 
-    chat.appendChild(botMsg);
+.menu a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    input.value = "";
-    chat.scrollTop = chat.scrollHeight;
+/* ================= IMÁGENES ================= */
+
+.tema-img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* ================= EXAMEN ================= */
+
+.examen {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff3ed;
+    border-radius: 15px;
+    border: 2px solid #ff7e5f;
+}
+
+.pregunta {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ================= CHAT ================= */
+
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.chatbox {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 2px solid #ff7e5f;
+    border-radius: 10px;
+}
+
+.chat-header {
+    background: #ff7e5f;
+    color: white;
+    padding: 10px;
+}
+
+.chat-mensajes {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-input-area {
+    display: flex;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 5px;
+}
+
+.usuario {
+    text-align: right;
+    color: blue;
+}
+
+.bot {
+    text-align: left;
+    color: green;
 }
