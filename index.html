@@ -4,35 +4,29 @@
 <meta charset="UTF-8">
 <title>Proyecto Matemáticas</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+
+<!-- IMPORTANTE: defer -->
+<script src="script.js" defer></script>
 </head>
 
 <body class="portada-body">
 
 <div class="portada-container">
-
     <h1 class="titulo">Proyecto de Matemáticas</h1>
     <p class="subtitulo">Aprende cálculo de forma interactiva</p>
-
-    <a href="#temas" class="btn-principal">Entrar al contenido</a>
-
+    <a href="#temas" class="btn-principal">Entrar</a>
 </div>
 
-<!-- SECCIÓN TEMAS -->
 <div id="temas" class="contenido">
+    <h1>Temas</h1>
 
-<h1>Temas disponibles</h1>
-
-<p>Selecciona un tema para empezar:</p>
-
-<ul>
-    <li><a href="limites.html">Límites</a></li>
-    <li><a href="derivadas.html">Derivadas</a></li>
-    <li><a href="integrales.html">Integrales</a></li>
-    <li><a href="areas.html">Áreas</a></li>
-    <li><a href="matrices.html">Matrices</a></li>
-</ul>
-
+    <ul>
+        <li><a href="limites.html">Límites</a></li>
+        <li><a href="derivadas.html">Derivadas</a></li>
+        <li><a href="integrales.html">Integrales</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="matrices.html">Matrices</a></li>
+    </ul>
 </div>
 
 <!-- BOTÓN CHAT -->
@@ -49,7 +43,7 @@
     <div id="chat-mensajes" class="chat-mensajes"></div>
 
     <div class="chat-input-area">
-        <input type="text" id="chat-input" placeholder="Pregunta algo sobre matemáticas...">
+        <input type="text" id="chat-input" placeholder="Pregunta algo...">
         <button onclick="enviarMensaje()">Enviar</button>
     </div>
 
