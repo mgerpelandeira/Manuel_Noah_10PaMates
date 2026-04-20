@@ -22,19 +22,109 @@
 
 <h1>Derivadas</h1>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tangent_to_a_curve.svg/500px-Tangent_to_a_curve.svg.png" class="tema-img">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Tangent_to_a_curve.svg" class="tema-img">
 
-<p>La derivada mide el cambio de una función.</p>
+<p>
+La derivada es un concepto fundamental del cálculo que mide cómo cambia una función en un punto determinado.
+Es decir, nos indica la pendiente de la recta tangente a una curva.
+</p>
+
+<p>
+Se utiliza en muchos ámbitos como la física, la economía o la ingeniería para estudiar velocidades, crecimiento o cambios.
+</p>
 
 <h2>Cómo se calculan</h2>
-<p>xⁿ → n·xⁿ⁻¹</p>
 
-<h2>Ejemplo</h2>
+<p>
+La regla básica de derivación es:
+</p>
+
+<p><b>xⁿ → n·xⁿ⁻¹</b></p>
+
+<p>
+Además existen otras reglas importantes:
+</p>
+
+<ul>
+<li>Derivada de una constante → 0</li>
+<li>Derivada de una suma → se derivan los términos</li>
+<li>Derivada de un producto</li>
+<li>Derivada de un cociente</li>
+</ul>
+
+<h2>Ejemplos</h2>
+
 <p>d/dx (x²) = 2x</p>
+<p>d/dx (x³) = 3x²</p>
+<p>d/dx (5x) = 5</p>
+<p>d/dx (7) = 0</p>
 
-<h2>Práctica</h2>
-<button onclick="comprobarRespuesta(true)">2x</button>
-<button onclick="comprobarRespuesta(false)">x</button>
+<h2>Ejemplo paso a paso</h2>
+
+<p>
+Derivar f(x) = x³
+</p>
+
+<p>
+Paso 1: identificar la potencia → 3  
+Paso 2: multiplicar → 3x²  
+Resultado: 3x²
+</p>
+
+<h2>Aplicaciones</h2>
+
+<p>
+Las derivadas permiten calcular:
+</p>
+
+<ul>
+<li>Velocidad</li>
+<li>Aceleración</li>
+<li>Puntos máximos y mínimos</li>
+<li>Crecimiento de funciones</li>
+</ul>
+
+<h2>Examen de práctica (10 preguntas)</h2>
+
+<p>1. Derivada de x²</p>
+<button onclick="responder(true, this)">2x</button>
+<button onclick="responder(false, this)">x</button>
+
+<p>2. Derivada de x³</p>
+<button onclick="responder(true, this)">3x²</button>
+<button onclick="responder(false, this)">x³</button>
+
+<p>3. Derivada de 5x</p>
+<button onclick="responder(true, this)">5</button>
+<button onclick="responder(false, this)">5x</button>
+
+<p>4. Derivada de 7</p>
+<button onclick="responder(true, this)">0</button>
+<button onclick="responder(false, this)">7</button>
+
+<p>5. Derivada de x⁴</p>
+<button onclick="responder(true, this)">4x³</button>
+<button onclick="responder(false, this)">x³</button>
+
+<p>6. Derivada de 2x²</p>
+<button onclick="responder(true, this)">4x</button>
+<button onclick="responder(false, this)">2x</button>
+
+<p>7. Derivada de x</p>
+<button onclick="responder(true, this)">1</button>
+<button onclick="responder(false, this)">x</button>
+
+<p>8. Derivada de 3x³</p>
+<button onclick="responder(true, this)">9x²</button>
+<button onclick="responder(false, this)">3x²</button>
+
+<p>9. Derivada de x⁵</p>
+<button onclick="responder(true, this)">5x⁴</button>
+<button onclick="responder(false, this)">x⁴</button>
+
+<p>10. Derivada de 10</p>
+<button onclick="responder(true, this)">0</button>
+<button onclick="responder(false, this)">10</button>
 
 <p id="resultado"></p>
 
