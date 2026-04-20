@@ -1,51 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Proyecto Matemáticas</title>
+<title>Matemáticas</title>
 <link rel="stylesheet" href="style.css">
-
-<!-- IMPORTANTE: defer -->
 <script src="script.js" defer></script>
 </head>
 
-<body class="portada-body">
+<body>
 
-<div class="portada-container">
-    <h1 class="titulo">Proyecto de Matemáticas</h1>
-    <p class="subtitulo">Aprende cálculo de forma interactiva</p>
-    <a href="#temas" class="btn-principal">Entrar</a>
+<div class="portada">
+    <div class="portada-container">
+        <h1 class="titulo">Matemáticas</h1>
+        <p class="subtitulo">Proyecto interactivo</p>
+        <a href="#temas" class="btn-principal">Entrar</a>
+    </div>
 </div>
 
 <div id="temas" class="contenido">
-    <h1>Temas</h1>
 
-    <ul>
-        <li><a href="limites.html">Límites</a></li>
-        <li><a href="derivadas.html">Derivadas</a></li>
-        <li><a href="integrales.html">Integrales</a></li>
-        <li><a href="areas.html">Áreas</a></li>
-        <li><a href="matrices.html">Matrices</a></li>
-    </ul>
+<h1>Temas</h1>
+
+<ul>
+<li><a href="limites.html">Límites</a></li>
+<li><a href="derivadas.html">Derivadas</a></li>
+<li><a href="integrales.html">Integrales</a></li>
+<li><a href="areas.html">Áreas</a></li>
+<li><a href="matrices.html">Matrices</a></li>
+</ul>
+
 </div>
 
-<!-- BOTÓN CHAT -->
 <button class="chat-btn" onclick="abrirChat()">💬</button>
 
-<!-- CHAT -->
 <div id="chatbox" class="chatbox">
 
-    <div class="chat-header">
-        Chat Matemático
-        <span class="cerrar" onclick="cerrarChat()">✖</span>
-    </div>
+<div class="chat-header">
+Chat
+<span onclick="cerrarChat()" style="float:right;cursor:pointer;">✖</span>
+</div>
 
-    <div id="chat-mensajes" class="chat-mensajes"></div>
+<div id="chat-mensajes" class="chat-mensajes"></div>
 
-    <div class="chat-input-area">
-        <input type="text" id="chat-input" placeholder="Pregunta algo...">
-        <button onclick="enviarMensaje()">Enviar</button>
-    </div>
+<div class="chat-input-area">
+<input id="chat-input" type="text">
+<button onclick="enviarMensaje()">Enviar</button>
+</div>
 
 </div>
 
