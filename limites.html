@@ -10,38 +10,78 @@
 <body>
 
 <div class="menu">
-    <a href="index.html">Inicio</a>
-    <a href="limites.html">Límites</a>
-    <a href="derivadas.html">Derivadas</a>
-    <a href="integrales.html">Integrales</a>
-    <a href="areas.html">Áreas</a>
-    <a href="matrices.html">Matrices</a>
+<a href="index.html">Inicio</a>
+<a href="limites.html">Límites</a>
+<a href="derivadas.html">Derivadas</a>
+<a href="integrales.html">Integrales</a>
+<a href="areas.html">Áreas</a>
+<a href="matrices.html">Matrices</a>
 </div>
 
 <div class="contenido">
 
 <h1>Límites</h1>
 
-<img src="https://www.fisicalab.com/sites/all/files/contenidos/matematicas/2339_limites_lat/limite_izquierdo.gif" class="tema-img">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Limit_function.svg" class="tema-img">
+
+<h2>¿Qué es un límite?</h2>
 
 <p>
-Un límite es el valor al que se acerca una función cuando la variable independiente (normalmente x) se aproxima a un número concreto.
-Aunque la función no esté definida en ese punto, el límite puede existir.
+Un límite es uno de los conceptos más importantes del cálculo. Nos permite estudiar el comportamiento de una función cuando la variable independiente (normalmente x) se aproxima a un valor concreto.
 </p>
 
 <p>
-Los límites son fundamentales en cálculo porque permiten estudiar el comportamiento de las funciones en puntos específicos, especialmente cuando hay discontinuidades o cambios bruscos.
-</p>
-
-<h2>Cómo se calculan</h2>
-
-<p>
-Para calcular un límite, normalmente se sustituye directamente el valor en la función.
-Si el resultado es un número normal, ese es el límite.
+No siempre importa el valor exacto de la función en ese punto, sino a qué valor se acerca. Esto es clave cuando una función no está definida en un punto o tiene una discontinuidad.
 </p>
 
 <p>
-Sin embargo, a veces aparecen indeterminaciones como:
+Por ejemplo, una función puede no estar definida en x = 2, pero aún así podemos calcular el límite cuando x se acerca a 2.
+</p>
+
+---
+
+<h2>Interpretación gráfica</h2>
+
+<p>
+Gráficamente, el límite representa el valor al que se aproxima la curva cuando nos acercamos a un punto desde la izquierda y la derecha.
+</p>
+
+<p>
+Si ambos lados coinciden, el límite existe. Si no coinciden, el límite no existe.
+</p>
+
+---
+
+<h2>Tipos de límites</h2>
+
+<ul>
+<li><b>Límite finito:</b> da un número concreto.</li>
+<li><b>Límite infinito:</b> la función crece sin límite.</li>
+<li><b>Límites laterales:</b> por la izquierda y por la derecha.</li>
+<li><b>Límites en el infinito:</b> cuando x tiende a infinito.</li>
+</ul>
+
+---
+
+<h2>Cómo calcular un límite</h2>
+
+<h3>1. Sustitución directa</h3>
+<p>
+El primer paso siempre es sustituir el valor de x.
+</p>
+
+<p>
+Ejemplo:
+</p>
+
+<p>lim (x→2) (x + 3) = 5</p>
+
+---
+
+<h3>2. Indeterminaciones</h3>
+
+<p>
+A veces aparecen expresiones como:
 </p>
 
 <ul>
@@ -50,84 +90,133 @@ Sin embargo, a veces aparecen indeterminaciones como:
 </ul>
 
 <p>
-En estos casos se utilizan técnicas como:
+Esto se llama indeterminación y hay que resolverla.
 </p>
+
+---
+
+<h3>3. Técnicas para resolver límites</h3>
 
 <ul>
-<li>Factorizar la expresión</li>
-<li>Simplificar términos</li>
-<li>Racionalizar</li>
+<li><b>Factorizar</b></li>
+<li><b>Simplificar fracciones</b></li>
+<li><b>Racionalizar</b></li>
+<li><b>Aplicar identidades algebraicas</b></li>
 </ul>
 
-<h2>Tipos de límites</h2>
+---
 
-<p><b>1. Límite finito:</b> da un número concreto.</p>
-<p><b>2. Límite infinito:</b> crece sin límite.</p>
-<p><b>3. Límite lateral:</b> cuando se estudia por la izquierda o derecha.</p>
+<h2>Ejemplo paso a paso</h2>
 
-<h2>Ejemplos resueltos</h2>
-
-<p>lim (x→2) (x + 3) = 5</p>
-<p>lim (x→0) (x²) = 0</p>
-<p>lim (x→1) (2x + 1) = 3</p>
-
-<h2>Ejemplo con indeterminación</h2>
-
-<p>
-lim (x→1) (x² - 1) / (x - 1)
-</p>
+<p>lim (x→1) (x² - 1) / (x - 1)</p>
 
 <p>
 Paso 1: factorizar → (x-1)(x+1) / (x-1)  
+</p>
+
+<p>
 Paso 2: simplificar → x+1  
+</p>
+
+<p>
 Paso 3: sustituir → 2  
 </p>
 
-<h2>Examen de práctica (10 preguntas)</h2>
+---
 
-<p>1. lim (x→2) (x + 1)</p>
-<button onclick="responder(true, this)">3</button>
-<button onclick="responder(false, this)">4</button>
+<h2>Aplicaciones de los límites</h2>
 
-<p>2. lim (x→0) (x²)</p>
-<button onclick="responder(true, this)">0</button>
-<button onclick="responder(false, this)">1</button>
+<p>
+Los límites son la base del cálculo diferencial e integral.
+</p>
 
-<p>3. lim (x→3) (2x)</p>
-<button onclick="responder(true, this)">6</button>
-<button onclick="responder(false, this)">3</button>
+<ul>
+<li>Definir derivadas</li>
+<li>Estudiar continuidad</li>
+<li>Analizar crecimiento de funciones</li>
+<li>Modelar fenómenos físicos</li>
+</ul>
 
-<p>4. lim (x→1) (x² + 1)</p>
-<button onclick="responder(true, this)">2</button>
-<button onclick="responder(false, this)">1</button>
+---
 
-<p>5. lim (x→4) (x - 2)</p>
-<button onclick="responder(true, this)">2</button>
-<button onclick="responder(false, this)">4</button>
+<h2>Errores comunes</h2>
 
-<p>6. lim (x→2) (3x)</p>
-<button onclick="responder(true, this)">6</button>
-<button onclick="responder(false, this)">3</button>
+<ul>
+<li>Sustituir sin comprobar indeterminación</li>
+<li>No simplificar correctamente</li>
+<li>Confundir límite con valor de la función</li>
+</ul>
 
-<p>7. lim (x→0) (5x)</p>
-<button onclick="responder(true, this)">0</button>
-<button onclick="responder(false, this)">5</button>
+---
 
-<p>8. lim (x→1) (x³)</p>
-<button onclick="responder(true, this)">1</button>
-<button onclick="responder(false, this)">3</button>
+<div class="examen">
 
-<p>9. lim (x→2) (x²)</p>
-<button onclick="responder(true, this)">4</button>
-<button onclick="responder(false, this)">2</button>
+<h2>Examen (10 preguntas)</h2>
 
-<p>10. lim (x→3) (x + 5)</p>
-<button onclick="responder(true, this)">8</button>
-<button onclick="responder(false, this)">5</button>
+<div class="pregunta">
+<p>1. lim (x→2)(x+1)</p>
+<button onclick="responder(true,this)">3</button>
+<button onclick="responder(false,this)">4</button>
+</div>
+
+<div class="pregunta">
+<p>2. lim (x→0)(x²)</p>
+<button onclick="responder(true,this)">0</button>
+<button onclick="responder(false,this)">1</button>
+</div>
+
+<div class="pregunta">
+<p>3. lim (x→3)(2x)</p>
+<button onclick="responder(true,this)">6</button>
+<button onclick="responder(false,this)">3</button>
+</div>
+
+<div class="pregunta">
+<p>4. lim (x→1)(x²+1)</p>
+<button onclick="responder(true,this)">2</button>
+<button onclick="responder(false,this)">1</button>
+</div>
+
+<div class="pregunta">
+<p>5. lim (x→4)(x-2)</p>
+<button onclick="responder(true,this)">2</button>
+<button onclick="responder(false,this)">4</button>
+</div>
+
+<div class="pregunta">
+<p>6. lim (x→2)(3x)</p>
+<button onclick="responder(true,this)">6</button>
+<button onclick="responder(false,this)">3</button>
+</div>
+
+<div class="pregunta">
+<p>7. lim (x→0)(5x)</p>
+<button onclick="responder(true,this)">0</button>
+<button onclick="responder(false,this)">5</button>
+</div>
+
+<div class="pregunta">
+<p>8. lim (x→1)(x³)</p>
+<button onclick="responder(true,this)">1</button>
+<button onclick="responder(false,this)">3</button>
+</div>
+
+<div class="pregunta">
+<p>9. lim (x→2)(x²)</p>
+<button onclick="responder(true,this)">4</button>
+<button onclick="responder(false,this)">2</button>
+</div>
+
+<div class="pregunta">
+<p>10. lim (x→3)(x+5)</p>
+<button onclick="responder(true,this)">8</button>
+<button onclick="responder(false,this)">5</button>
+</div>
 
 <p id="resultado"></p>
 
 </div>
 
+</div>
 </body>
 </html>
