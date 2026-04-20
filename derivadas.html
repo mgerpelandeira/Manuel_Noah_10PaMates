@@ -10,12 +10,12 @@
 <body>
 
 <div class="menu">
-    <a href="index.html">Inicio</a>
-    <a href="limites.html">Límites</a>
-    <a href="derivadas.html">Derivadas</a>
-    <a href="integrales.html">Integrales</a>
-    <a href="areas.html">Áreas</a>
-    <a href="matrices.html">Matrices</a>
+<a href="index.html">Inicio</a>
+<a href="limites.html">Límites</a>
+<a href="derivadas.html">Derivadas</a>
+<a href="integrales.html">Integrales</a>
+<a href="areas.html">Áreas</a>
+<a href="matrices.html">Matrices</a>
 </div>
 
 <div class="contenido">
@@ -24,111 +24,176 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Tangent_to_a_curve.svg" class="tema-img">
 
+<h2>¿Qué es una derivada?</h2>
+
 <p>
-La derivada es un concepto fundamental del cálculo que mide cómo cambia una función en un punto determinado.
-Es decir, nos indica la pendiente de la recta tangente a una curva.
+La derivada es uno de los conceptos más importantes del cálculo diferencial. Se utiliza para medir cómo cambia una función respecto a una variable.
 </p>
 
 <p>
-Se utiliza en muchos ámbitos como la física, la economía o la ingeniería para estudiar velocidades, crecimiento o cambios.
+De forma más intuitiva, la derivada nos indica la pendiente de la recta tangente a una curva en un punto concreto. Es decir, nos dice si la función está creciendo, decreciendo o permanece constante.
 </p>
-
-<h2>Cómo se calculan</h2>
 
 <p>
-La regla básica de derivación es:
+Por ejemplo, en física, la derivada de la posición respecto al tiempo es la velocidad. Esto muestra cómo de rápido cambia algo.
 </p>
+
+---
+
+<h2>Interpretación gráfica</h2>
+
+<p>
+Gráficamente, la derivada representa la inclinación de la curva en un punto. Si la pendiente es positiva, la función crece; si es negativa, decrece.
+</p>
+
+<p>
+Una pendiente igual a 0 indica un punto máximo o mínimo.
+</p>
+
+---
+
+<h2>Cómo se calculan las derivadas</h2>
+
+<h3>Regla básica de potencias</h3>
 
 <p><b>xⁿ → n·xⁿ⁻¹</b></p>
 
 <p>
-Además existen otras reglas importantes:
+Esta es la regla más importante y la más utilizada en cálculo.
 </p>
 
+---
+
+<h3>Otras reglas importantes</h3>
+
 <ul>
-<li>Derivada de una constante → 0</li>
-<li>Derivada de una suma → se derivan los términos</li>
-<li>Derivada de un producto</li>
-<li>Derivada de un cociente</li>
+<li><b>Derivada de una constante:</b> 0</li>
+<li><b>Derivada de x:</b> 1</li>
+<li><b>Suma:</b> se derivan los términos por separado</li>
+<li><b>Producto:</b> (u·v)' = u'v + uv'</li>
+<li><b>Cociente:</b> (u/v)' = (u'v - uv') / v²</li>
 </ul>
 
-<h2>Ejemplos</h2>
+---
+
+<h2>Ejemplos básicos</h2>
 
 <p>d/dx (x²) = 2x</p>
 <p>d/dx (x³) = 3x²</p>
 <p>d/dx (5x) = 5</p>
 <p>d/dx (7) = 0</p>
 
+---
+
 <h2>Ejemplo paso a paso</h2>
 
 <p>
-Derivar f(x) = x³
+Derivar f(x) = 3x³
 </p>
 
 <p>
-Paso 1: identificar la potencia → 3  
-Paso 2: multiplicar → 3x²  
-Resultado: 3x²
+Paso 1: aplicar la regla → 3 · 3x²  
 </p>
-
-<h2>Aplicaciones</h2>
 
 <p>
-Las derivadas permiten calcular:
+Paso 2: simplificar → 9x²  
 </p>
+
+<p>
+Resultado final: 9x²  
+</p>
+
+---
+
+<h2>Aplicaciones de las derivadas</h2>
 
 <ul>
-<li>Velocidad</li>
-<li>Aceleración</li>
-<li>Puntos máximos y mínimos</li>
-<li>Crecimiento de funciones</li>
+<li>Calcular velocidades y aceleraciones</li>
+<li>Encontrar máximos y mínimos</li>
+<li>Analizar crecimiento de funciones</li>
+<li>Optimización en economía</li>
 </ul>
 
-<h2>Examen de práctica (10 preguntas)</h2>
+---
 
-<p>1. Derivada de x²</p>
-<button onclick="responder(true, this)">2x</button>
-<button onclick="responder(false, this)">x</button>
+<h2>Errores comunes</h2>
 
-<p>2. Derivada de x³</p>
-<button onclick="responder(true, this)">3x²</button>
-<button onclick="responder(false, this)">x³</button>
+<ul>
+<li>Olvidar multiplicar por el exponente</li>
+<li>No reducir el exponente correctamente</li>
+<li>Derivar constantes como si fueran variables</li>
+</ul>
 
-<p>3. Derivada de 5x</p>
-<button onclick="responder(true, this)">5</button>
-<button onclick="responder(false, this)">5x</button>
+---
 
-<p>4. Derivada de 7</p>
-<button onclick="responder(true, this)">0</button>
-<button onclick="responder(false, this)">7</button>
+<div class="examen">
 
-<p>5. Derivada de x⁴</p>
-<button onclick="responder(true, this)">4x³</button>
-<button onclick="responder(false, this)">x³</button>
+<h2>Examen (10 preguntas)</h2>
 
-<p>6. Derivada de 2x²</p>
-<button onclick="responder(true, this)">4x</button>
-<button onclick="responder(false, this)">2x</button>
+<div class="pregunta">
+<p>1. d(x²)</p>
+<button onclick="responder(true,this)">2x</button>
+<button onclick="responder(false,this)">x</button>
+</div>
 
-<p>7. Derivada de x</p>
-<button onclick="responder(true, this)">1</button>
-<button onclick="responder(false, this)">x</button>
+<div class="pregunta">
+<p>2. d(x³)</p>
+<button onclick="responder(true,this)">3x²</button>
+<button onclick="responder(false,this)">x³</button>
+</div>
 
-<p>8. Derivada de 3x³</p>
-<button onclick="responder(true, this)">9x²</button>
-<button onclick="responder(false, this)">3x²</button>
+<div class="pregunta">
+<p>3. d(5x)</p>
+<button onclick="responder(true,this)">5</button>
+<button onclick="responder(false,this)">5x</button>
+</div>
 
-<p>9. Derivada de x⁵</p>
-<button onclick="responder(true, this)">5x⁴</button>
-<button onclick="responder(false, this)">x⁴</button>
+<div class="pregunta">
+<p>4. d(7)</p>
+<button onclick="responder(true,this)">0</button>
+<button onclick="responder(false,this)">7</button>
+</div>
 
-<p>10. Derivada de 10</p>
-<button onclick="responder(true, this)">0</button>
-<button onclick="responder(false, this)">10</button>
+<div class="pregunta">
+<p>5. d(x⁴)</p>
+<button onclick="responder(true,this)">4x³</button>
+<button onclick="responder(false,this)">x³</button>
+</div>
+
+<div class="pregunta">
+<p>6. d(2x²)</p>
+<button onclick="responder(true,this)">4x</button>
+<button onclick="responder(false,this)">2x</button>
+</div>
+
+<div class="pregunta">
+<p>7. d(x)</p>
+<button onclick="responder(true,this)">1</button>
+<button onclick="responder(false,this)">x</button>
+</div>
+
+<div class="pregunta">
+<p>8. d(3x³)</p>
+<button onclick="responder(true,this)">9x²</button>
+<button onclick="responder(false,this)">3x²</button>
+</div>
+
+<div class="pregunta">
+<p>9. d(x⁵)</p>
+<button onclick="responder(true,this)">5x⁴</button>
+<button onclick="responder(false,this)">x⁴</button>
+</div>
+
+<div class="pregunta">
+<p>10. d(10)</p>
+<button onclick="responder(true,this)">0</button>
+<button onclick="responder(false,this)">10</button>
+</div>
 
 <p id="resultado"></p>
 
 </div>
 
+</div>
 </body>
 </html>
