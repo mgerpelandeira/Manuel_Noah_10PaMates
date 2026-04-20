@@ -1,100 +1,90 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+// ================= EXAMEN =================
+
+let puntuacion = 0;
+let preguntasRespondidas = 0;
+
+function responder(correcta, boton) {
+
+    let botones = boton.parentElement.querySelectorAll("button");
+    botones.forEach(b => b.disabled = true);
+
+    preguntasRespondidas++;
+
+    if (correcta) {
+        puntuacion++;
+        boton.style.background = "green";
+    } else {
+        boton.style.background = "red";
+    }
+
+    if (preguntasRespondidas === 10) {
+        mostrarNota();
+    }
 }
 
-/* PORTADA */
-.portada-body {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+function mostrarNota() {
+    let nota = (puntuacion / 10) * 10;
+
+    let mensaje = "";
+
+    if (nota >= 9) mensaje = "🔥 Sobresaliente";
+    else if (nota >= 7) mensaje = "👏 Notable";
+    else if (nota >= 5) mensaje = "👍 Aprobado";
+    else mensaje = "❌ Suspenso";
+
+    document.getElementById("resultado").innerHTML =
+        "<h2>Resultado final</h2>" +
+        "Aciertos: " + puntuacion + "/10<br>" +
+        "Nota: " + nota + " - " + mensaje;
 }
 
-.portada-container {
-    text-align: center;
-    color: white;
+
+// ================= CHATBOT =================
+
+function abrirChat() {
+    document.getElementById("chatbox").style.display = "block";
 }
 
-.titulo { font-size: 60px; }
-.subtitulo { font-size: 20px; margin-bottom: 30px; }
-
-.btn-principal {
-    padding: 15px 30px;
-    background: white;
-    color: #ff7e5f;
-    border-radius: 10px;
-    text-decoration: none;
+function cerrarChat() {
+    document.getElementById("chatbox").style.display = "none";
 }
 
-/* TEMAS */
-body:not(.portada-body) {
-    background: linear-gradient(135deg, #fff5f2, #ffe3d8);
-}
+function enviarMensaje() {
+    let input = document.getElementById("chat-input");
+    let mensaje = input.value.toLowerCase();
 
-.menu {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    padding: 15px;
-    text-align: center;
-}
+    if (mensaje.trim() === "") return;
 
-.menu a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
+    let chat = document.getElementById("chat-mensajes");
 
-.contenido {
-    max-width: 800px;
-    margin: 40px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-}
+    // Mensaje usuario
+    let userMsg = document.createElement("div");
+    userMsg.className = "usuario";
+    userMsg.innerText = mensaje;
+    chat.appendChild(userMsg);
 
-/* IMÁGENES */
-.tema-img {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    display: block;
-}
+    // Respuesta IA
+    let botMsg = document.createElement("div");
+    botMsg.className = "bot";
 
-/* ================= EXAMEN ================= */
+    if (mensaje.includes("limite")) {
+        botMsg.innerText = "Un límite es el valor al que se aproxima una función.";
+    }
+    else if (mensaje.includes("derivada")) {
+        botMsg.innerText = "La derivada mide el cambio de una función.";
+    }
+    else if (mensaje.includes("integral")) {
+        botMsg.innerText = "La integral sirve para calcular áreas y acumulaciones.";
+    }
+    else if (mensaje.includes("hola")) {
+        botMsg.innerText = "Hola 👋 soy tu asistente de matemáticas.";
+    }
+    else {
+        botMsg.innerText = "No entiendo la pregunta, prueba con: límite, derivada o integral.";
+    }
 
-.examen {
-    margin-top: 30px;
-    padding: 20px;
-    background: #fff3ed;
-    border-radius: 15px;
-    border: 2px solid #ff7e5f;
-}
+    chat.appendChild(botMsg);
 
-.pregunta {
-    margin-bottom: 20px;
-    padding: 10px;
-    background: white;
-    border-radius: 10px;
-}
-
-.pregunta p {
-    font-weight: bold;
-}
-
-button {
-    margin: 5px;
-    padding: 8px 12px;
-    background: #ff7e5f;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#resultado {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
 }
