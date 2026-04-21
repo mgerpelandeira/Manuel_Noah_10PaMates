@@ -10,35 +10,214 @@
 <body>
 
 <div class="menu">
-    <a href="index.html">Inicio</a>
-    <a href="limites.html">Límites</a>
-    <a href="derivadas.html">Derivadas</a>
-    <a href="integrales.html">Integrales</a>
-    <a href="areas.html">Áreas</a>
-    <a href="matrices.html">Matrices</a>
+<a href="index.html">Inicio</a>
+<a href="limites.html">Límites</a>
+<a href="derivadas.html">Derivadas</a>
+<a href="integrales.html">Integrales</a>
+<a href="areas.html">Áreas</a>
+<a href="matrices.html">Matrices</a>
 </div>
 
 <div class="contenido">
 
 <h1>Integrales</h1>
 
-<img src="https://www.profesor10demates.com/wp-content/uploads/2018/04/Integrales-tabla.png" class="tema-img">
-    
-<p>La integral es el proceso inverso de la derivada.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Integral_as_region_under_curve.svg" class="tema-img">
 
-<h2>Cómo se calculan</h2>
-<p>∫ xⁿ dx = xⁿ⁺¹/(n+1)</p>
+<h2>¿Qué es una integral?</h2>
 
-<h2>Ejemplo</h2>
-<p>∫ 2x dx = x²</p>
+<p>
+La integral es uno de los conceptos fundamentales del cálculo. Se puede entender como el proceso inverso de la derivada, y se utiliza principalmente para calcular áreas, acumulaciones y cantidades totales.
+</p>
 
-<h2>Práctica</h2>
-<button onclick="comprobarRespuesta(true)">x²</button>
-<button onclick="comprobarRespuesta(false)">2x²</button>
+<p>
+Mientras que la derivada mide el cambio de una función, la integral mide cuánto se acumula ese cambio.
+</p>
+
+<p>
+Por ejemplo, si conocemos la velocidad de un objeto, podemos usar integrales para calcular la distancia recorrida.
+</p>
+
+---
+
+<h2>Interpretación gráfica</h2>
+
+<p>
+Gráficamente, una integral representa el área bajo la curva de una función en un intervalo determinado.
+</p>
+
+<p>
+Si la función está por encima del eje X, el área es positiva; si está por debajo, el área se considera negativa.
+</p>
+
+---
+
+<h2>Tipos de integrales</h2>
+
+<ul>
+<li><b>Integral indefinida:</b> no tiene límites y representa una familia de funciones.</li>
+<li><b>Integral definida:</b> tiene límites y da un valor numérico (área).</li>
+</ul>
+
+---
+
+<h2>Cómo calcular integrales</h2>
+
+<h3>Regla básica de potencias</h3>
+
+<p><b>∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C</b></p>
+
+<p>
+La constante C aparece porque existen infinitas funciones cuya derivada es la misma.
+</p>
+
+---
+
+<h3>Otras reglas importantes</h3>
+
+<ul>
+<li><b>∫ k dx = kx + C</b></li>
+<li><b>∫ (f + g) dx = ∫f dx + ∫g dx</b></li>
+<li><b>Factor constante:</b> k∫f dx</li>
+</ul>
+
+---
+
+<h2>Ejemplos básicos</h2>
+
+<p>∫ x dx = x² / 2 + C</p>
+<p>∫ x² dx = x³ / 3 + C</p>
+<p>∫ 5 dx = 5x + C</p>
+
+---
+
+<h2>Ejemplo paso a paso</h2>
+
+<p>∫ 3x² dx</p>
+
+<p>
+Paso 1: aplicar regla → 3 · (x³ / 3)  
+</p>
+
+<p>
+Paso 2: simplificar → x³  
+</p>
+
+<p>
+Resultado final: x³ + C  
+</p>
+
+---
+
+<h2>Integral definida (ejemplo)</h2>
+
+<p>
+∫₀² x dx
+</p>
+
+<p>
+Paso 1: calcular primitiva → x²/2  
+</p>
+
+<p>
+Paso 2: evaluar → (2²/2) - (0²/2)  
+</p>
+
+<p>
+Resultado: 2  
+</p>
+
+---
+
+<h2>Aplicaciones de las integrales</h2>
+
+<ul>
+<li>Cálculo de áreas</li>
+<li>Volúmenes de sólidos</li>
+<li>Física (movimiento, trabajo)</li>
+<li>Economía (costes acumulados)</li>
+</ul>
+
+---
+
+<h2>Errores comunes</h2>
+
+<ul>
+<li>Olvidar sumar +C</li>
+<li>No dividir por el nuevo exponente</li>
+<li>Confundir integral con derivada</li>
+</ul>
+
+---
+
+<div class="examen">
+
+<h2>Examen (10 preguntas)</h2>
+
+<div class="pregunta">
+<p>1. ∫ x dx</p>
+<button onclick="responder(true,this)">x²/2</button>
+<button onclick="responder(false,this)">x²</button>
+</div>
+
+<div class="pregunta">
+<p>2. ∫ x² dx</p>
+<button onclick="responder(true,this)">x³/3</button>
+<button onclick="responder(false,this)">x³</button>
+</div>
+
+<div class="pregunta">
+<p>3. ∫ 2x dx</p>
+<button onclick="responder(true,this)">x²</button>
+<button onclick="responder(false,this)">2x²</button>
+</div>
+
+<div class="pregunta">
+<p>4. ∫ 5 dx</p>
+<button onclick="responder(true,this)">5x</button>
+<button onclick="responder(false,this)">5</button>
+</div>
+
+<div class="pregunta">
+<p>5. ∫ x³ dx</p>
+<button onclick="responder(true,this)">x⁴/4</button>
+<button onclick="responder(false,this)">x⁴</button>
+</div>
+
+<div class="pregunta">
+<p>6. ∫ 3x² dx</p>
+<button onclick="responder(true,this)">x³</button>
+<button onclick="responder(false,this)">3x³</button>
+</div>
+
+<div class="pregunta">
+<p>7. ∫ x⁴ dx</p>
+<button onclick="responder(true,this)">x⁵/5</button>
+<button onclick="responder(false,this)">x⁵</button>
+</div>
+
+<div class="pregunta">
+<p>8. ∫ 7 dx</p>
+<button onclick="responder(true,this)">7x</button>
+<button onclick="responder(false,this)">7</button>
+</div>
+
+<div class="pregunta">
+<p>9. ∫ x⁵ dx</p>
+<button onclick="responder(true,this)">x⁶/6</button>
+<button onclick="responder(false,this)">x⁶</button>
+</div>
+
+<div class="pregunta">
+<p>10. ∫ 4x dx</p>
+<button onclick="responder(true,this)">2x²</button>
+<button onclick="responder(false,this)">4x²</button>
+</div>
 
 <p id="resultado"></p>
 
 </div>
 
+</div>
 </body>
 </html>
